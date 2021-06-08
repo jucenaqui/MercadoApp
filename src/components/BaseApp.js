@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import queryString from 'query-string';
 
-import SearchApp from './SearchApp';
-import ProductApp from './ProductApp';
+import ProductApp from './product/ProductApp';
 import { getProducts } from '../hooks/GetProducts';
+import { HeaderBarApp } from './header/HeaderBarApp';
 
 const BaseApp = ( { history, location } ) => {
 
@@ -30,7 +30,7 @@ const BaseApp = ( { history, location } ) => {
 
     return (
         <>
-            < SearchApp setProducts={setProducts} history={ history } location={ location } />
+            <HeaderBarApp setProducts={setProducts} history={ history } location={ location } />
             {
                 items && <ProductApp products= { items } />
             }

@@ -1,0 +1,16 @@
+.header-bar {
+    background-color: #fff159;
+    border: 1px solid rgba(87, 87, 87, 0.5);
+    display: flex;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+
+    img {
+        width: 70px;
+        height: 35px;
+        margin-top: 5px;
+    }
+}

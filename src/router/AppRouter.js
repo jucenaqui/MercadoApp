@@ -6,7 +6,7 @@ import {
     Redirect
   } from 'react-router-dom';
 import BaseApp from '../components/BaseApp';
-import { ProductListApp } from '../components/ProductListApp';
+import { ProductListApp } from '../components/product/ProductListApp';
 
 export const AppRouter = () => {
     return (

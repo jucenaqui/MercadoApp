@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { PropTypes } from 'prop-types';
 
+import './SearchApp.scss';
+
 const SearchApp = ( { setProducts, history, location }) => {
 
     const [ inputValue, setInputValue ] = useState('');
@@ -26,7 +28,7 @@ const SearchApp = ( { setProducts, history, location }) => {
         }
     }
     return (
-        <form onSubmit={ handleSubmit }>
+        <form onSubmit={ handleSubmit } className="search-form">
             <input 
             type="text"
             value={ inputValue }
