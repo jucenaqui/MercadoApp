@@ -15,10 +15,10 @@ export const ProductItemApp = ( { product} ) => {
         <>
       
             <div className="product-item-app" onClick={ handleLink }>
-                <img className="producto-item-img-app" src={product.thumbnail}  alt={product.title}/>
+                <img className="producto-item-img-app" src={product.picture}  alt={product.title}/>
                 <div className="product-description-app"> 
-                <h3>$ {product.price}</h3>   
-                <p>{product.title}</p>
+                    <h3>$ {product.price?.amount}</h3>   
+                    <p>{product.title}</p>
                 </div>
             </div>
         </>

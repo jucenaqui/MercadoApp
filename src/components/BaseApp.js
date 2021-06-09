@@ -10,18 +10,22 @@ const BaseApp = ({location}) => {
 
     const [ products, setProducts ] = useState({
         items: [],
-        search
+        categories: '',
+        search: '',
+        author: {}
     });
 
-    const { items } = products;
+    const { items, categories } = products;
 
     useEffect(()=> {
         getProducts(search)
-        .then( (items) => {
+        .then( ({ items, categories, author }) => {
             setProducts( value => { 
                 return {
                     ...value,
-                    items
+                    items,
+                    categories,
+                    author
                 }
             });
         });
@@ -29,7 +33,7 @@ const BaseApp = ({location}) => {
 
     return (
         <>
-            { items.length > 0 && <ProductApp products={ items } /> }
+            { items.length > 0 && <ProductApp products={ items } categories={ categories } /> }
         </>
     )
 }

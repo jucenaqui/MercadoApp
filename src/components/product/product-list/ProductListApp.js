@@ -8,22 +8,31 @@ export const ProductListApp = () => {
 
     const { id } = useParams();
 
-    const [productItem, setProductItem] = useState({})
+    const [productItem, setProductItem] = useState({
+        item: {},
+        categories: [],
+        author: {}
+    })
     
-    const item = productItem;
+    const { item , categories } = productItem;
 
     useEffect(() => {
         getProductsById( id )
-        .then( prods => {
-           setProductItem( prods );
-           console.log(prods)
+        .then( ({ item, categories,author }) => {
+           setProductItem( prods => {
+               return {
+                   ...prods,
+                   item,
+                   categories
+               }
+           } );
         })
     }, [id]);
 
     return (
         <div>
             {
-                item && <ProductItemDescriptionApp product={item} />
+                item && <ProductItemDescriptionApp product={item} categories={ categories } />
             }
         </div>
     )

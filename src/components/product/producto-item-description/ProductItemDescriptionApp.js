@@ -2,11 +2,15 @@ import React from 'react';
 
 import './ProductItemDescriptionApp.scss';
 
-export const ProductItemDescriptionApp = ( { product } ) => {
+export const ProductItemDescriptionApp = ( { product, categories } ) => {
     
     return (
         <>
-      
+            <p className="product-category"> 
+                { 
+                    categories && categories.map(item => item.name).join(' > ')
+                } 
+            </p>
             <div className="product-item">
                 <div className="container-product">
                     <div className="container-product-item">
