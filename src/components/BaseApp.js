@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import queryString from 'query-string';
 
 import { getProducts } from '../hooks/GetProducts';
-import ProductApp from './product/ProductApp';
+import ProductApp from './product/productApp/ProductApp';
 
 const BaseApp = ({location}) => {
 

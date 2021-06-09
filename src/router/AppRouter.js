@@ -7,7 +7,7 @@ import {
   } from 'react-router-dom';
 import BaseApp from '../components/BaseApp';
 import { HeaderBarApp } from '../components/header/HeaderBarApp';
-import { ProductListApp } from '../components/product/ProductListApp';
+import { ProductListApp } from '../components/product/product-list/ProductListApp';
 
 import { createBrowserHistory } from "history";
 

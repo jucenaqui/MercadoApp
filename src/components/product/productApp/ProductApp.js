@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProductItemApp} from './ProductItemApp';
+import {ProductItemApp} from '../producto-item/ProductItemApp';
 
 import './ProductApp.scss';
 

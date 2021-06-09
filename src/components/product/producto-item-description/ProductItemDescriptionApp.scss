@@ -1,0 +1,109 @@
+.product-item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .container-product {
+        background-color: white;
+        padding: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .container-product-item {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        border-radius: 4px;
+
+        img {
+            margin: 10px;
+            border-radius: 3px;
+            width: 350px;
+        }
+
+        .product-item-params {
+            margin-top: 10px;
+
+            .producto-item-condition {
+                color: gray;
+            }
+
+            .producto-item-title {
+                font-size: 1.2rem;
+                width: 200px;
+            }
+
+            .producto-item-button {
+                background-color: #0e9fec;
+                border: none;
+                border-radius: 3px;
+                color: white;
+                font-size: 1rem;
+                padding: 8px 20px;
+                margin-top: 1.5rem;
+                width: 100%;
+            }
+
+            h2 {
+                margin: 5px 0px;
+            }
+        }
+
+    }
+}
+
+.product-item-description-app {
+    
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    p {
+        width: 80%;
+        padding: 10px;
+    }
+
+    h2 {
+        margin: 10px 0;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: '768px') {
+    .container-product-item {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    .product-item-params {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .producto-item-title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .producto-item-button {
+            width: 80%;
+        }
+    }
+
+    .product-item-description-app {
+    
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            width: 90%;
+            text-align: justify;
+        }
+
+    }
+}
