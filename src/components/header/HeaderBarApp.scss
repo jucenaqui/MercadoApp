@@ -8,6 +8,11 @@
     width: 100%;
     justify-content: center;
 
+    .container-search {
+        display: flex;
+        width: 83%;
+    }
+
     img {
         width: 70px;
         height: 35px;

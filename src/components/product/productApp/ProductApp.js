@@ -12,7 +12,7 @@ const ProductApp = ( { products, categories } ) => {
             categories.map(item => item.name).join(' > ')
         } 
         </p>
-        <ol className="product-list">
+        <ol className="product-list animate__animated animate__fadeIn">
             {
                 products.map((product)=> (<ProductItemApp key={product.id} product={product} />))
             }

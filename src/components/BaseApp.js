@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import queryString from 'query-string';
 
-import { getProducts } from '../hooks/GetProducts';
+import { getProducts } from '../helpers/GetProducts';
 import ProductApp from './product/productApp/ProductApp';
 
 const BaseApp = ({location}) => {
 
+    const searchLimit = 4;
     const { search = '' } = queryString.parse( location.search );
 
     const [ products, setProducts ] = useState({
@@ -18,7 +19,7 @@ const BaseApp = ({location}) => {
     const { items, categories } = products;
 
     useEffect(()=> {
-        getProducts(search)
+        getProducts(search, searchLimit)
         .then( ({ items, categories, author }) => {
             setProducts( value => { 
                 return {

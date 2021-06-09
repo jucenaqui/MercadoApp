@@ -11,7 +11,7 @@ export const ProductItemDescriptionApp = ( { product, categories } ) => {
                     categories && categories.map(item => item.name).join(' > ')
                 } 
             </p>
-            <div className="product-item">
+            <div className="product-item animate__animated animate__fadeIn">
                 <div className="container-product">
                     <div className="container-product-item">
                         <img className="producto-item-img" src={product.picture}  alt={product.title}/>

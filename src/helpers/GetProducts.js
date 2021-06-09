@@ -1,13 +1,16 @@
+import { GetCategories } from "./GetCategories";
 
-export const getProducts = async ( product ) => {
+export const getProducts = async ( product, limit ) => {
     
     let categories = [];
     let categoryId = '';
-    const url = `https://api.mercadolibre.com/sites/MLA/search?q=${product}&limit=4`;
-    const urlCategories = `https://api.mercadolibre.com/categories/`;
+    const url = `https://api.mercadolibre.com/sites/MLA/search?q=${product}&limit=${limit}`;
+    
+    // se consultan productos
     const resp = await fetch(url);
     const { results, filters, available_filters } = await resp.json();
 
+    // se validan filtros para las categorias
     if ( filters?.length > 0 ) {
         let data = filters[0];
         let path_from_root = data.values[0].path_from_root;
@@ -19,8 +22,7 @@ export const getProducts = async ( product ) => {
             let intCategories = available_filter[0].values;
             intCategories.sort( (a,b) =>  b.results - a.results);
             categoryId = intCategories[0].id;
-            const resp = await fetch(urlCategories + categoryId);
-            const data = await resp.json();
+            const data = await GetCategories(categoryId);
             categories = data.path_from_root;
         }
     }
