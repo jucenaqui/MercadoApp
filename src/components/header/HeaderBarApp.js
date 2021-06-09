@@ -5,11 +5,11 @@ import SearchApp from '../search/SearchApp';
 
 import './HeaderBarApp.scss';
 
-export const HeaderBarApp = ( { setProducts, history, location }) => {
+export const HeaderBarApp = ({history}) => {
     return (
         <div className="header-bar">
             <img src={ logo } alt="logo" />
-            <SearchApp setProducts={setProducts} history={ history } location={ location } />
+            <SearchApp history={ history } />
         </div>
     )
 }

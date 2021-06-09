@@ -1,17 +1,25 @@
 import React from 'react'
 import {
-    BrowserRouter as Router,
+    Router,
     Switch,
     Route,
     Redirect
   } from 'react-router-dom';
 import BaseApp from '../components/BaseApp';
+import { HeaderBarApp } from '../components/header/HeaderBarApp';
 import { ProductListApp } from '../components/product/ProductListApp';
 
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
+
 export const AppRouter = () => {
+
     return (
-        <Router>
+        <Router  history={history}>
             <div>
+                <HeaderBarApp history={ history } />
+
                 <Switch> 
                     <Route exact path="/" component={ BaseApp } />
                     <Route exact path="/items" component={ BaseApp } />

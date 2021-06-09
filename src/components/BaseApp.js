@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import queryString from 'query-string';
 
-import ProductApp from './product/ProductApp';
 import { getProducts } from '../hooks/GetProducts';
-import { HeaderBarApp } from './header/HeaderBarApp';
+import ProductApp from './product/ProductApp';
 
-const BaseApp = ( { history, location } ) => {
+const BaseApp = ({location}) => {
 
     const { search = '' } = queryString.parse( location.search );
 
@@ -26,14 +25,11 @@ const BaseApp = ( { history, location } ) => {
                 }
             });
         });
-    }, [search ])
+    }, [search])
 
     return (
         <>
-            <HeaderBarApp setProducts={setProducts} history={ history } location={ location } />
-            {
-                items && <ProductApp products= { items } />
-            }
+            { items.length > 0 && <ProductApp products={ items } /> }
         </>
     )
 }

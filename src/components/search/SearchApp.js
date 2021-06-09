@@ -1,30 +1,19 @@
 import React, { useState } from 'react';
 
-import { PropTypes } from 'prop-types';
-
 import './SearchApp.scss';
 
-const SearchApp = ( { setProducts, history, location }) => {
+const SearchApp = ( { history } ) => {
 
-    const [ inputValue, setInputValue ] = useState('');
+    const [inputValue, setInputValue] = useState('');
     
     const handleInputChange = (e) => {
-        setInputValue(e.target.value)
+        setInputValue(e.target.value);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if ( inputValue.trim().length > 2 ) {
-
-            history.push(`items?search=${inputValue}`);
-
-            setProducts( prop => {
-                return {
-                    ...prop,
-                    search: inputValue
-                }
-            })
-            setInputValue('');
+            history.push(`/items?search=${inputValue}`);
         }
     }
     return (
@@ -36,10 +25,6 @@ const SearchApp = ( { setProducts, history, location }) => {
             />
         </form>
     )
-}
-
-SearchApp.propTypes = {
-    setProducts: PropTypes.func.isRequired
 }
 
 export default SearchApp;
