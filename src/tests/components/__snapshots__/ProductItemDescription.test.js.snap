@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas <ProductItemDescription /> should show the component succesfull 1`] = `
+<Fragment>
+  <p
+    className="product-category"
+  >
+    Electrodomésticos &gt; Refrigeración &gt; Refrigeradores
+  </p>
+  <div
+    className="product-item animate__animated animate__fadeIn"
+  >
+    <div
+      className="container-product"
+    >
+      <div
+        className="container-product-item"
+      >
+        <img
+          alt="Heladera"
+          className="producto-item-img"
+          src="http://http2.mlstatic.com/D_965028-MLA32542008594_102019-I.jpg"
+        />
+        <div
+          className="product-item-params"
+        >
+          <span
+            className="producto-item-condition"
+          >
+            Nuevo
+             - 
+             Vendidos 
+          </span>
+          <p
+            className="producto-item-title"
+          >
+            Heladera
+          </p>
+          <h2>
+            $ 
+            47200
+          </h2>
+          <button
+            className="producto-item-button"
+          >
+            Comprar
+          </button>
+        </div>
+      </div>
+      <div
+        className="product-item-description-app"
+      >
+        <h2
+          className="description-title"
+        >
+          Descrición del producto
+        </h2>
+        <p
+          className="description"
+        >
+          la description
+        </p>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 
+import PropTypes from 'prop-types';
+
 import './ProductItemApp.scss';
 
 export const ProductItemApp = ( { product} ) => {
@@ -13,7 +15,6 @@ export const ProductItemApp = ( { product} ) => {
     
     return (
         <>
-      
             <div className="product-item-app" onClick={ handleLink }>
                 <img className="producto-item-img-app" src={product.picture}  alt={product.title}/>
                 <div className="product-description-app"> 
@@ -23,4 +24,8 @@ export const ProductItemApp = ( { product} ) => {
             </div>
         </>
     )
+}
+
+ProductItemApp.prototype = {
+    product: PropTypes.object.isRequired
 }

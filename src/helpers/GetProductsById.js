@@ -1,20 +1,24 @@
+import { GetCategories } from "./GetCategories";
+import { GetDescription } from "./GetDescription";
 
-export const getProductsById = async ( theId ) => {
+export const getProductById = async ( theId = '') => {
     
+    if ( !theId ) return {};
+
     const urlItem = `https://api.mercadolibre.com/items/${theId}`;
-    const urlItemDescription = `https://api.mercadolibre.com/items/${theId}/description`;
-    const urlItemCategories = `https://api.mercadolibre.com/categories/`;
 
     const resp = await fetch(urlItem);
     const { thumbnail, id, title, price, currency_id, 
              condition, shipping, sold_quantity, category_id
     } = await resp.json();
    
-    const resp2 = await fetch(urlItemDescription);
-    const { plain_text } = await resp2.json();
+    if ( !id ) return {};
 
-    const resp3 = await fetch(urlItemCategories + category_id);
-    const { path_from_root } = await resp3.json();
+    // search description
+    const { plain_text } = await GetDescription(theId);
+
+    // search categories
+    const { path_from_root } = await GetCategories(category_id);
 
 
     const result =  {
@@ -38,7 +42,6 @@ export const getProductsById = async ( theId ) => {
             description: plain_text
         }
     }
-    console.log(result)
     return result;
 
 }

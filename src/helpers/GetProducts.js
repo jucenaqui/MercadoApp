@@ -1,6 +1,6 @@
 import { GetCategories } from "./GetCategories";
 
-export const getProducts = async ( product, limit ) => {
+export const getProducts = async ( product, limit = 10 ) => {
     
     let categories = [];
     let categoryId = '';

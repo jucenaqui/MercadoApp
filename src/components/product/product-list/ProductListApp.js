@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
-import { getProductsById } from '../../../helpers/GetProductsById';
+import { getProductById } from '../../../helpers/GetProductsById';
 import { ProductItemDescriptionApp } from '../producto-item-description/ProductItemDescriptionApp';
 
 export const ProductListApp = () => {
@@ -17,7 +17,7 @@ export const ProductListApp = () => {
     const { item , categories } = productItem;
 
     useEffect(() => {
-        getProductsById( id )
+        getProductById( id )
         .then( ({ item, categories,author }) => {
            setProductItem( prods => {
                return {

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 import './ProductItemDescriptionApp.scss';
 
 export const ProductItemDescriptionApp = ( { product, categories } ) => {
@@ -23,11 +25,16 @@ export const ProductItemDescriptionApp = ( { product, categories } ) => {
                         </div>
                     </div>
                     <div className="product-item-description-app"> 
-                        <h2>Descrición del producto</h2>
-                        <p>{product.description}</p>
+                        <h2 className="description-title">Descrición del producto</h2>
+                        <p className="description">{product.description}</p>
                     </div>
                 </div>
             </div>
         </>
     )
+}
+
+ProductItemDescriptionApp.propTypes = {
+    product: PropTypes.object.isRequired,
+    categories: PropTypes.array.isRequired
 }

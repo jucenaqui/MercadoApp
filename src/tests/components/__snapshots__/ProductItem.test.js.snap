@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas <ProductItem /> should show the component succesfull 1`] = `
+<Fragment>
+  <div
+    className="product-item-app"
+    onClick={[Function]}
+  >
+    <img
+      alt="Heladera"
+      className="producto-item-img-app"
+      src="http://http2.mlstatic.com/D_965028-MLA32542008594_102019-I.jpg"
+    />
+    <div
+      className="product-description-app"
+    >
+      <h3>
+        $ 
+        47200
+      </h3>
+      <p>
+        Heladera
+      </p>
+    </div>
+  </div>
+</Fragment>
+`;
