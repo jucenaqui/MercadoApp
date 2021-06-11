@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.19745fbf.chunk.css",
-    "main.js": "/static/js/main.4659e3a0.chunk.js",
-    "main.js.map": "/static/js/main.4659e3a0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.01825fc2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.01825fc2.js.map",
-    "static/js/2.460797f0.chunk.js": "/static/js/2.460797f0.chunk.js",
-    "static/js/2.460797f0.chunk.js.map": "/static/js/2.460797f0.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.19745fbf.chunk.css.map": "/static/css/main.19745fbf.chunk.css.map",
-    "static/js/2.460797f0.chunk.js.LICENSE.txt": "/static/js/2.460797f0.chunk.js.LICENSE.txt"
+    "main.css": "/MercadoApp/static/css/main.19745fbf.chunk.css",
+    "main.js": "/MercadoApp/static/js/main.70cd162c.chunk.js",
+    "main.js.map": "/MercadoApp/static/js/main.70cd162c.chunk.js.map",
+    "runtime-main.js": "/MercadoApp/static/js/runtime-main.372d72e6.js",
+    "runtime-main.js.map": "/MercadoApp/static/js/runtime-main.372d72e6.js.map",
+    "static/js/2.4348eef8.chunk.js": "/MercadoApp/static/js/2.4348eef8.chunk.js",
+    "static/js/2.4348eef8.chunk.js.map": "/MercadoApp/static/js/2.4348eef8.chunk.js.map",
+    "index.html": "/MercadoApp/index.html",
+    "static/css/main.19745fbf.chunk.css.map": "/MercadoApp/static/css/main.19745fbf.chunk.css.map",
+    "static/js/2.4348eef8.chunk.js.LICENSE.txt": "/MercadoApp/static/js/2.4348eef8.chunk.js.LICENSE.txt",
+    "static/media/logo-header.519aa855.png": "/MercadoApp/static/media/logo-header.519aa855.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.01825fc2.js",
-    "static/js/2.460797f0.chunk.js",
+    "static/js/runtime-main.372d72e6.js",
+    "static/js/2.4348eef8.chunk.js",
     "static/css/main.19745fbf.chunk.css",
-    "static/js/main.4659e3a0.chunk.js"
+    "static/js/main.70cd162c.chunk.js"
   ]
 }

@@ -3,7 +3,8 @@ import {
     Router,
     Switch,
     Route,
-    Redirect
+    Redirect,
+    HashRouter
   } from 'react-router-dom';
 import BaseApp from '../components/BaseApp';
 import { HeaderBarApp } from '../components/header/HeaderBarApp';
@@ -17,16 +18,18 @@ export const AppRouter = () => {
 
     return (
         <Router  history={history}>
-            <div>
-                <HeaderBarApp history={ history } />
+            <HashRouter basename="/">
+                <div>
+                    <HeaderBarApp history={ history } />
 
-                <Switch> 
-                    <Route exact path="/" component={ BaseApp } />
-                    <Route exact path="/items" component={ BaseApp } />
-                    <Route exact path="/items/:id" component={ ProductListApp } />
-                    <Redirect to="/" />
-                </Switch>
-            </div>
+                    <Switch> 
+                        <Route exact path="/" component={ BaseApp } />
+                        <Route exact path="/items" component={ BaseApp } />
+                        <Route exact path="/items/:id" component={ ProductListApp } />
+                        <Redirect to="/" />
+                    </Switch>
+                </div>
+            </HashRouter>
         </Router>
     )
 }
