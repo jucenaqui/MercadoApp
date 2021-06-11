@@ -1,6 +1,5 @@
 import React from 'react';
 
-import logo from '../../assets/logo-header.png';
 import SearchApp from '../search/SearchApp';
 
 import './HeaderBarApp.scss';
@@ -9,7 +8,7 @@ export const HeaderBarApp = ({history}) => {
     return (
         <div className="header-bar">
             <div className="container-search">
-                <img src={ logo } alt="logo" />
+                <img src={ process.env.PUBLIC_URL + 'logo-header.png' } alt="logo" />
                 <SearchApp history={ history } />
             </div>
         </div>
