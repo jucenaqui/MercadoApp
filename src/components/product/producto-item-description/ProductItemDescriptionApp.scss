@@ -18,7 +18,7 @@
         img {
             margin: 10px;
             border-radius: 3px;
-            width: 350px;
+            width: 50%;
         }
 
         .product-item-params {
@@ -73,10 +73,6 @@
     .container-product-item {
         flex-direction: column;
         align-items: center;
-
-        img {
-            width: 300px;
-        }
     }
 
     .product-item-params {
