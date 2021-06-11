@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test to <ProductApp /> should show the component succesfull 1`] = `
+<Fragment>
+  <p
+    className="product-category"
+  >
+    Electrodomésticos &gt; Refrigeración &gt; Refrigeradores
+  </p>
+  <ol
+    className="product-list animate__animated animate__fadeIn"
+  >
+    <ProductItemApp
+      key="MLA856481792"
+      product={
+        Object {
+          "condition": "new",
+          "description": "la description",
+          "free_shipping": false,
+          "id": "MLA856481792",
+          "picture": "http://http2.mlstatic.com/D_965028-MLA32542008594_102019-I.jpg",
+          "price": Object {
+            "amount": 47200,
+            "currency": "ARS",
+            "decimals": 0,
+          },
+          "title": "Heladera",
+        }
+      }
+    />
+    <ProductItemApp
+      key="MLA856481792"
+      product={
+        Object {
+          "condition": "old",
+          "description": "la description 2",
+          "free_shipping": false,
+          "id": "MLA856481792",
+          "picture": "http://http2.mlstatic.com/D_965028-MLA32542008594_102019-I.jpg",
+          "price": Object {
+            "amount": 47300,
+            "currency": "ARS",
+            "decimals": 0,
+          },
+          "title": "Heladera2",
+        }
+      }
+    />
+  </ol>
+</Fragment>
+`;

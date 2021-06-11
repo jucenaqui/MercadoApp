@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test to <SearchApp /> should show the component succesfull 1`] = `
+<form
+  className="search-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="input-group"
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <FaSearch />
+  </div>
+</form>
+`;

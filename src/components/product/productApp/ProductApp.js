@@ -1,5 +1,6 @@
 import React from 'react';
 import {ProductItemApp} from '../producto-item/ProductItemApp';
+import PropTypes from 'prop-types';
 
 import './ProductApp.scss';
 
@@ -20,5 +21,12 @@ const ProductApp = ( { products, categories } ) => {
      </>
     )
 }
+
+
+ProductApp.propTypes = {
+    products: PropTypes.array.isRequired,
+    categories: PropTypes.array.isRequired
+}
+
 
 export default ProductApp;
