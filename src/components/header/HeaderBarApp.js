@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../../images/logo-header.png';
+import logo from '../../assets/logo-header.png';
 import SearchApp from '../search/SearchApp';
 
 import './HeaderBarApp.scss';
