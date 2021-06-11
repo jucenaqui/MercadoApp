@@ -5,7 +5,6 @@ import { getProductById } from '../../../helpers/GetProductsById';
 import { ProductItemDescriptionApp } from '../producto-item-description/ProductItemDescriptionApp';
 
 export const ProductListApp = () => {
-
     const { id } = useParams();
 
     const [productItem, setProductItem] = useState({
