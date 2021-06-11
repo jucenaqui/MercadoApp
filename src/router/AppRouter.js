@@ -18,7 +18,6 @@ export const AppRouter = () => {
 
     return (
         <Router  history={history}>
-            <HashRouter basename="./">
                 <div>
                     <HeaderBarApp history={ history } />
 
@@ -29,7 +28,6 @@ export const AppRouter = () => {
                         <Redirect to="/" />
                     </Switch>
                 </div>
-            </HashRouter>
         </Router>
     )
 }
