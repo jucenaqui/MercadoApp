@@ -12,10 +12,6 @@ exports[`Test to <App /> should show the component succesfull 1`] = `
     <title>
       MercadoApp
     </title>
-    <link
-      href="%PUBLIC_URL%/favicon.ico"
-      rel="icon"
-    />
     <meta
       content="width=device-width, initial-scale=1"
       name="viewport"
@@ -27,10 +23,6 @@ exports[`Test to <App /> should show the component succesfull 1`] = `
     <meta
       content="Busca tus productos favoritos"
       name="description"
-    />
-    <link
-      href="%PUBLIC_URL%/manifest.json"
-      rel="manifest"
     />
   </HelmetWrapper>
   <AppRouter />
