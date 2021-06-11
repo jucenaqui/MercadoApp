@@ -18,7 +18,7 @@ export const AppRouter = () => {
 
     return (
         <Router  history={history}>
-            <HashRouter basename="/">
+            <HashRouter basename="./">
                 <div>
                     <HeaderBarApp history={ history } />
 
