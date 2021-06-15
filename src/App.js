@@ -1,5 +1,6 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
+import { BrowserRouter } from 'react-router-dom';
 import { AppRouter } from './router/AppRouter';
 
 const App = () => {
@@ -17,7 +18,9 @@ const App = () => {
               content="Busca tus productos favoritos"
             />
         </Helmet>
-        <AppRouter />
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
       </>
   )
 }
