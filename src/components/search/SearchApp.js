@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useEffect } from 'react';
+import React, { useState,  } from 'react';
 import { FaSearch } from "react-icons/fa";
 
 import './SearchApp.scss';
@@ -6,6 +7,10 @@ import './SearchApp.scss';
 const SearchApp = ( { history } ) => {
 
     const [inputValue, setInputValue] = useState('');
+
+    useEffect(() => {
+        history.push(`/items?search=${inputValue}`);
+    }, [history, inputValue])
     
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
